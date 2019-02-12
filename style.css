@@ -1,0 +1,286 @@
+/* Reset */
+body, ul, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'arial';
+    background-color: #171B1E;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Layout */
+
+.l-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.l-sidebar {
+    float: right;
+    width: 250px;
+    margin-left: 20px;
+}
+
+/* Module */
+.l-wrapper::after,
+.l-main::after,
+.clearfix::after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.header {
+    background-color: #31373E;
+    color: #919496;
+}
+
+.header-menu li {
+    float: left;
+}
+
+.header-logo {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.header-menu {
+    background-color: #272C32;
+    overflow: hidden;
+}
+
+.header-menu li a {
+    display: block;
+    padding: 15px 20px;
+}
+
+.header-menu li:hover {
+    background-color: #23282d;
+}
+
+.header-point {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.contents {
+    padding: 20px 0;
+}
+
+.movie-card {
+    background-image: url("images/movie-limit.png");
+    background-position: bottom;
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+.movie-card-cover {
+    width: 100%;
+    border-bottom: 5px solid goldenrod;
+}
+
+.movie-card h2 {
+    color: goldenrod;
+    margin: 15px;
+}
+
+.movie-card p {
+    color: #777777;
+    margin: 15px;
+    line-height: 1.4em;
+}
+
+.article {
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.article-cover {
+    width: 100%;
+    vertical-align: top;
+}
+
+.article-icon {
+    float: left;
+    margin: 0 20px;
+    transform: translateY(-50%);
+    width: 20%;
+    min-width: 50px;
+    max-width: 100px;
+    vertical-align: top;
+}
+
+.article-contents {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.article-hgroup {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.article-hgroup h3 {
+    float: left;
+    color: green;
+}
+
+.article-hgroup h3 span {
+    font-size: 0.8em;
+    color: #999;
+    font-weight: normal;
+}
+
+.article-hgroup .star {
+    float: right;
+    background-image: url(images/star.png);
+    width: 100px;
+    height: 20px;
+}
+
+.article-hgroup .star .star-rating {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/star.png);
+    background-position: left bottom;
+}
+
+.article-contents {
+    color: #999;
+    line-height: 1.4;
+}
+
+.footer {
+    border-top: 1px solid #666;
+    padding: 30px;
+    color: #666;
+}
+
+.funtion-icon {
+    float: right;
+    margin-right: 5px;
+}
+
+.funtion-icon ul {
+    margin-top: -1em;
+}
+
+.funtion-icon li {
+    float: left;
+}
+
+.funtion-icon li a {
+    width: 45px;
+    height: 40px;
+    display: block;
+    background-position: center top;
+    text-indent: -9999px;
+    background-image: url("images/sprite-btn.png");
+}
+
+.funtion-icon li a.zoom {
+    background-position: right top;
+}
+
+.funtion-icon li a.like {
+    background-position: center top;
+}
+
+.funtion-icon li a.share {
+    background-position: left top;
+}
+
+
+/* Tablet*/
+@media (max-width: 770px) {
+    .header {
+        text-align: center;
+    }
+
+    .header-point {
+        display: none;
+    }
+
+    .header-menu li {
+        width: 20%;
+    }
+
+    .l-sidebar {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .header-logo img {
+        width: 120px;
+        height: 25px;
+        text-align: center;
+    }
+
+    .header-menu li {
+        font-size: 0.5rem;
+    }
+
+    .header-menu li a {
+        padding: 10px 0;
+    }
+
+    .article-icon {
+        float: none;
+        display: block;
+        margin: 0 auto -70px;
+    }
+
+    .article-contents {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .article-hgroup {
+        text-align: center;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .article-hgroup h3 {
+        float: none;
+    }
+
+    .article-hgroup .star {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .star-rating {
+        width: 20px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .funtion-icon {
+        display: none;
+    }
+}
+
